@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_meeting/Screens/login_screen.dart';
 import 'package:flutter_meeting/utils/colors.dart';
 
 void main() {
@@ -12,11 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Mettings',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: const Text('hello! world'),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+      },
+      home: const LoginScreen(),
     );
   }
 }
