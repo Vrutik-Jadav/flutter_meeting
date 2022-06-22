@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_meeting/utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
       ),
-      home: const Text('hello'),
+      home: const Text('hello! world'),
     );
   }
 }
